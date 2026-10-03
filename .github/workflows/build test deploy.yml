@@ -1,18 +1,12 @@
 name: Build Test Deploy
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   build-test-deploy:
-
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Build
         run: echo "Building..."
